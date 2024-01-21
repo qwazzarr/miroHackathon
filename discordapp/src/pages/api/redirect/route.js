@@ -2,7 +2,7 @@ import {redirect} from 'next/navigation';
 import initMiroAPI from '../../../utils/initMiroAPI';
 
 // handle redirect with code and exchange it for the access token
-export async function GET(request) {
+export default async function GET(request) {
   const {miro, userId} = initMiroAPI();
   console.log("I am parth of AUTH on backend , here is my code: "+code);
   // Make sure the code is in query parameters
