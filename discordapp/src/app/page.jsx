@@ -25,17 +25,12 @@ const getBoards = async () => {
   };
 };
 
+
 export default async function Page() {
   const {boards, authUrl} = await getBoards();
 
   return (
     <div>
-      <h3>API usage demo</h3>
-      <p className="p-small">API Calls need to be authenticated</p>
-      <p>
-        Apps that use the API usually would run on your own domain. During
-        development, test on http://localhost:3000
-      </p>
       {authUrl ? (
         <a className="button button-primary" href={authUrl}>
           Login
@@ -50,7 +45,9 @@ export default async function Page() {
             ))}
           </ul>
         </>
-      )}
+      )
+      }
+      <button className={"button button-primary"} type="button">Click me for some shit</button>
     </div>
   );
 }
